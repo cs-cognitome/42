@@ -6,7 +6,7 @@
 /*   By: tvoronko <tvoronko@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/13 15:06:35 by tvoronko     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/14 15:41:46 by tvoronko    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/14 16:11:55 by tvoronko    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -28,11 +28,4 @@ void	ft_putstr(char *str)
 		ft_putchar(str[i]);
 		i++;
 	}
-}
-
-#include <stdio.h>
-int	main()
-{	
-	ft_putstr("Matt is such a princess!");
-	return (0);
 }
