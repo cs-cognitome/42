@@ -1,37 +1,63 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   first_word.c                                     .::    .:/ .      .::   */
+/*   repeat_alpha.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: tvoronko <tvoronko@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/07/16 14:00:05 by tvoronko     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/21 22:49:27 by tvoronko    ###    #+. /#+    ###.fr     */
+/*   Created: 2019/07/21 21:28:44 by tvoronko     #+#   ##    ##    #+#       */
+/*   Updated: 2019/07/21 22:22:37 by tvoronko    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-int main(int argc, char **argv)
+char	ft_repeat_alpha(char *str)
 {
-	int i = 0;
+	int i;
+	int j;
+	int tmp;
 
-	if (argc >= 2)
-	{	
-		while (argv[1][i] == ' ')
-			i++;
-		while (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			ft_putchar(argv[argc - 1]);
-			i++;
+			j = 0;
+			tmp = str[i] - 64;
+			while (j < tmp)
+			{
+				ft_putchar(str[i]);
+				j++;
+			}
 		}
+		else if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			j = 0;
+			tmp = str[i] - 96;
+			while (j < tmp)
+			{
+				ft_putchar(str[i]);
+				j++;
+			}
+		}
+		else
+			ft_putchar(str[i]);
+		i++;
 	}
+	return (*str);
+}
+
+int		main(int argc, char **argv)
+{
+	if (argc == 2)
+		ft_repeat_alpha(argv[1]);
 	ft_putchar('\n');
-	return 0;
+	return (0);
 }
