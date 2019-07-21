@@ -6,7 +6,7 @@
 /*   By: tvoronko <tvoronko@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/21 15:52:06 by tvoronko     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/21 16:19:50 by tvoronko    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/21 18:05:29 by tvoronko    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -38,6 +38,6 @@ int     main(int argc, char **argv)
 {
     if (argc == 2)
         ft_rotone(argv[1]);
-        ft_putchar('\n');
+    ft_putchar('\n');
     return (0);
 }

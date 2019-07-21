@@ -6,7 +6,7 @@
 /*   By: tvoronko <tvoronko@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/07/21 12:57:36 by tvoronko     #+#   ##    ##    #+#       */
-/*   Updated: 2019/07/21 15:49:58 by tvoronko    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/07/21 18:05:21 by tvoronko    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -33,7 +33,6 @@ char    ft_rot_13(char *str)
             ft_putchar(str[i]);
         i++;
     }
-    ft_putchar('\n');
     return (*str);
 }
 
@@ -42,6 +41,7 @@ int     main(int argc, char **argv)
     if (argc == 2)
     {
         ft_rot_13(argv[1]);
+        ft_putchar('\n');
     }
     return (0);
 }
