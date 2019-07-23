@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 			i++;
 		while (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
 		{
-			ft_putchar(argv[argc - 1]);
+			ft_putchar(argv[1][i]);
 			i++;
 		}
 	}
